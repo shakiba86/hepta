@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Abril Fatface";
+    src: url("../../fonts/abril/abril.eot");
+    /* IE9*/
+    src: url("../../fonts/abril/abril.eot?#iefix") format("embedded-opentype"),
+      /* IE6-IE8 */
+      url("../../fonts/abril/abril.woff2") format("woff2"),
+      /* chrome、firefox */
+      url("../../fonts/abril/abril.woff") format("woff"),
+      /* chrome、firefox */
+      url("../../fonts/abril/abril.ttf") format("truetype"),
+      /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("../../fonts/abril/abril.svg#Abril Fatface") format("svg");
+    /* iOS 4.1- */
+  }
+  

@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Mukta Mahee Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Mukta Mahee Regular"),
+    url("../../fonts/mukta/MuktaMahee-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Mukta Mahee ExtraLight";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Mukta Mahee ExtraLight"),
+    url("../../fonts/mukta/MuktaMahee-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Mukta Mahee Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Mukta Mahee Light"),
+    url("../../fonts/mukta/MuktaMahee-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Mukta Mahee Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Mukta Mahee Medium"),
+    url("../../fonts/mukta/MuktaMahee-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Mukta Mahee SemiBold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Mukta Mahee SemiBold"),
+    url("../../fonts/mukta/MuktaMahee-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Mukta Mahee Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Mukta Mahee Bold"),
+    url("../../fonts/mukta/MuktaMahee-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Mukta Mahee ExtraBold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Mukta Mahee ExtraBold"),
+    url("../../fonts/mukta/MuktaMahee-ExtraBold.woff") format("woff");
+}
