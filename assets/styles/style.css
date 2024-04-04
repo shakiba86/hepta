@@ -1,184 +1,567 @@
 
-  .hero {
-    height:100vh;
-    background-image: url(/assets/images/hero_1.jpg.webp);
-    width:100%;
-    background-size: cover;
-    min-height: 700px;
-    background-position: center center;
+.hero {
+  height:100vh;
+  background-image: url(/assets/images/hero_1.jpg.webp);
+  width:100%;
+  background-size: cover;
+  min-height: 700px;
+  background-position: center center;
+}
+.hero.about {
+  background-image: url(/assets/images/hero2.webp);
+}
+.hero.blog {
+  background-image: url(/assets/images/hero_3.jpg.webp);
+}
+.hero.contact {
+  background-image: url(/assets/images/International.webp);
+}
+.hero.hotel {
+  background-image: url(/assets/images/hero_5.jpg.webp);
+}
+.hero.about,
+.hero.about .content .content-wrapper,
+.hero.blog,
+.hero.blog .content .content-wrapper,
+.hero.contact,
+.hero.contact .content .content-wrapper,
+.hero.hotel,
+.hero.hotel .content .content-wrapper {
+  height:70vh;
+  min-height: 500px;
+}
+.hero:before {
+  position:absolute;
+   width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  content:"";
+  background: rgba(0, 0, 0, 0.2); ;
+}
+.header {
+  padding: 60px 0;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+}
+/*For this reason, I fixed the position where the cross menu moved with the page scroll*/
+.header.fix {
+  position: fixed;
+  z-index:10;
+}
+.header .logo h3 {
+  font-size: 3rem;
+}
+.header .logo h3 a {
+  color:var(--white);
+  font-weight:var(--f-weight-bold);
+}
+.header .menu {
+  width: 40px;
+  height: 23px;
+  cursor: pointer;
+}
+.header .menu span {
+  /* position: absolute; */
+  width: 100%;
+  height: 2px;
+  background:var(--white);
+  display:block;
+}
+/*Because I wanted it to be a higher priority*/
+.header .menu.active span {
+  position:relative;
+  z-index:9;
+}
+/* .header .menu span:nth-child(1) {
+  top: 0;
+}
+.header .menu span:nth-child(2) {
+  top: 10px;
+}
+.header .menu span:nth-child(3) {
+  top: 20px;
+} */
+.header .menu.active span:nth-child(1) {
+  background: #000;
+  transform:translateY(6px) rotateZ(45deg);
+}
+.header .menu.active span:nth-child(2) {
+  background: #000;
+  opacity: 0;
+  left: 0;
+}
+.header .menu.active span:nth-child(3) {
+  background: #000;
+  transform:translateY(-15px) rotateZ(-45deg);
+}
+.header .collapse {
+  position: fixed;
+  inset: 0;
+  position:absolute;
+  background: #fff;
+  min-height: 700px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s ease;
+  z-index:3;
+  height:100vh;
+}
+.header .collapse.show {
+  opacity: 1;
+  visibility: visible;
+}
+.header .collapse ul li h3 a {
+  color: #000;
+  font-size: 40px;
+  font-weight: 200;
+  padding: 5px 10px;
+  position: relative;
+  transition: all 0.3ms;
+}
+.header .collapse ul li h3 a:hover {
+  color: #65c0ba;
+}
+.header .collapse ul li h3 a.active {
+  color: #65c0ba;
+}
+.hero .content .content-wrapper {
+  height:100vh;
+  min-height: 700px;
+}
+.hero .content {
+  color:var(--white);
   }
-  .hero:before {
-    position:absolute;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
-    content:"";
-    background: rgba(0, 0, 0, 0.2); ;
+.hero .content h1 {
+  font-size: 8rem;
+  font-weight: var(--f-weight-bold);
+  line-height: 1;
+}
+.hero .content p {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight:var(--f-weight-light);
+  font-family: "Mukta Mahee ExtraLight";
+  color:var(--white);
+}
+.hero .content p a {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s;
+  padding-bottom: 2px;
+}
+.hero .content p a:hover {
+  border-bottom: 2px solid var(--white);
+  color: rgba(255, 255, 255, 1);
+}
+.hero .button {
+  background: transparent;
+  border: 2px solid var(--white);
+  border-radius: 4px;
+  display: inline-block;
+  padding: 16px 30px;
+  color:var(--light);
+  font-size: 1.5rem;
+  transition: all 0.15s;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.hero .button:hover {
+  background:var(--white);
+  color:var(--black);
+}
+.hero .scroll-down {
+  position: absolute;
+  bottom: 20px;
+  color:var(--white);
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.hero .scroll-down * {
+  display: block;
+}
+.hero .scroll-down i {
+  font-size: 1.4rem;
+}
+.hero .scroll-down span {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.welcome  img {
+  width: 100%;
+  height: auto;
   }
-  .header {
-    padding: 60px 0;
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
+.welcome .title {
+  font-size: 3.2rem;
+}
+.welcome .padding {
+  padding:0 15px 0 40px;
+}
+.welcome  p {
+  font-family:var(--f-mukta-extra-light);
+}
+.welcome .video-playable {
+  gap:10px;
+}
+.welcome .video-playable .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--c-text-main);
+  color:var(--c-icon);
+  transition: all .3s;
+  padding-left: 3px;
+  font-size: 1.7rem;
+}
+.welcome .video-playable .text {
+  font-size: 1.8rem;
+  color: var(--c-icon);
+  font-family:var(--f-mukta);
+  letter-spacing: 2px;
+  font-weight: var(--f-weight-bold);
+  transition: all .3s;
+}
+.welcome .video-playable:hover .icon {
+  border-color: var(--black);
+  color:var(--black);
+}
+.welcome .video-playable:hover .text {
+  color:var(--c-color-label);
+}
+.familyroom .image {
+  background-image: url(/assets/images/hero_1.jpg.webp);
+  background-size: cover;
+  background-position: center center;
+  /* min-height: 625px;
+  height:70vh; */
+  background-repeat: no-repeat;
+}
+.familyroom .content {
+    padding:100px 7%;
+}
+familyroom .content {
+  padding:78px;
+ }
+.familyroom  p {
+  font-family:var(--f-mukta-extra-light);
+}
+.button {
+  background: transparent;
+  border: 2px solid var(--c-icon);
+  border-radius: 4px;
+  display: inline-block;
+  padding: 10px 30px;
+  color:var(--c-learnmore);
+  font-size: 1.5rem;
+  transition: all 0.15s;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family:var(--f-mukta);
+}
+.button:hover {
+  background:var(--c-icon);
+  color:var(--black);
+}
+.PresidentialRoom .image {
+  background-image: url(/assets/images/welcome.webp);
+  /* min-height: 70vh; */
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   }
-  .header .logo h3 {
-    font-size: 3rem;
+.PresidentialRoom .content {
+  padding:100px 7%;
   }
+.hotel-gallery .subtitle {
+  color:var(--c-text);
+  font-family:var(--f-mukta-light);
+}
+.hotel-gallery .slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hotel-gallery .slider:before {
+  position:absolute;
+  width: 100%;
+  height:100%;
+  content:"";
+  top:0;
+  left:0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.hotel-gallery .slider .bullets {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+}
+.hotel-gallery .slider .bullets ul {
+    gap: 10px;
+}
+.hotel-gallery .slider .bullets ul li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  background:var(--white);
+  cursor:pointer;
+}
+.hotel-gallery .slider .bullets ul li.active {
+  background: transparent;
+}
+.hotel-gallery .slider .arrows i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4rem;
+  color:var(--c-arrows);
+  transition: all .3s;
+  cursor:pointer;
+}
+.hotel-gallery .slider .arrows i:hover {
+  color:var(--text);
+}
+.hotel-gallery .slider .arrows i.fa-angle-left {
+  left: -52px;
+}
+.hotel-gallery .slider .arrows i.fa-angle-right {
+  right: -52px;
+}
+.team .team-list ul li .holder {
+  box-shadow:0 2px 5px -2px rgba(0, 0, 0, 0.1);
+  background: var(--white);
+}
+.hotel-feature {
+  background: #e9ecef;
+  padding-top:100px;
+}
+.hotel-feature .subtitle {
+  color:var(--c-text);
+  font-family:var(--f-mukta-light);
+}
+.hotel-feature:after {
+  content: "";
+  width: 100%;
+  height: 430px;
+  position: absolute;
+  top: -430px;
+  left: 0;
+  background: #e9ecef;
+  /* transform: skew(0, -4deg); */
+  z-index: -1;
+}
+.hotel-feature .hotel-feature-list ul li .image img {
+  width: 100%;
+  height: auto;
+}
+.hotel-feature .hotel-feature-list .hotel-feature-list-holder {
+  background: var(--white);
+  height:100%;
+}
+.hotel-feature .hotel-feature-list .content {
+  padding: 10px 30px;
+}
+ .hotel-feature .hotel-feature-list .content .title h3 {
+  line-height: 1.2;
+  color: #000;
+  margin: 0;
+  transition: all 0.5s;
+  font-size:2.6rem;
+}
+.hotel-feature .hotel-feature-list .content .title:hover h3 {
+  color:var(--c-icon);
+}
+.co-founder {
+  padding:10px 30px;
+}
+.co-founder p {
+  color:var(--c-date);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.news .news-list ul li .content {
+  background:var(--white);
+  box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.1);
+}
+.news .news-list ul li .bottom-content {
+  padding: 10px 30px;
+}
+.news .news-list ul li .bottom-content .title {
+  line-height: 1.2;
+  color:var(--black);
+  margin: 0;
+  transition: all 0.5s;
+  font-size: 2.6rem;
+}
+.news .news-list ul li .bottom-content .title:hover {
+  color:var(--c-icon);
+}
+/* .news .news-list ul li .bottom-content .date {
+  color: #ced4da;
+  letter-spacing: 3px;
+} */
+.news .pagination ul .page-item .page-link {
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color:var(--c-icon);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3ms;
+}
+.news .pagination ul .page-item .page-link.active {
+  background-color:var(--c-icon);
+  color:var(--white);
+  }
+.news .pagination ul .page-item .page-link:not(.active):hover {
+  color:var(--c-color-label);
+}
+.news .sidebar .sidebar-padding {
+  padding: 30px;
+  background:var(--white);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.news .sidebar .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 1.7rem;
+  color:var(--c-text);
+}
+.news .sidebar .search-input {
+  display: block;
+  padding: 6px 12px 6px 40px;
+  border-radius: 0px;
+  border: 2px solid var(--c-border-search);
+  height: 50px;
+  width: 100%;
+  font-family:var(--f-mukta);
+  font-size: 1.7rem;
+  color:var(--c-arrows);
+  background-color:var(--white);
+}
+.news .sidebar .search-input:focus {
+  border-radius: 0px;
+  border-color:var(--c-border-search-focus);
+  outline: none;
+}
+.news .sidebar .sidebar-title {
+  font-family: "Mukta Mahee Regular";
+  color:var(--c-footer);
+  font-size: 2rem;
+}
+.news .sidebar ul li .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-right: 12px;
+}
+.news .sidebar ul li .content p {
+  font-size: 1.3rem;
+  color:var(--c-news-sidebar);
+  text-transform: uppercase;
+  letter-spacing:1px;
+}
+.news .sidebar ul li .content h3 {
+  font-size: 1.6rem;
+  color:var(--c-footer);
+  line-height: 1.2;
+  font-weight: 500;
+}
+.news .sidebar  .categories ul li a {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--c-border-bottom);
+}
+.news .sidebar .categories ul {
+ width:100%;
+}
+.news .sidebar .categories ul li a .left-categories p {
+  font-size: 1.8rem;
+  color: #65c0ba;
+}
+.news .sidebar .categories ul li a .right-categories p {
+  font-size: 1.8rem;
+}
+.contact-section .contact-form {
+  padding: 48px 12px 48px 12px;
+}
+.contact-section .contact-form .label {
+  display: inline-block;
+  font-size: 1.8rem;
+  color:var(--c-text);
+  font-weight: 100;
+}
+.contact-section .contact-form .input-form {
+  display: block;
+  padding: 6px 12px 6px 12px;
+  border: 2px solid var(--c-reviews);
+  border-radius: 0.25rem;
+  box-shadow: none;
+  height: 50px;
+  width: 100%;
+  font-size: 1.7rem;
+  color:var(--c-arrows);
+  background-color:var(--white);
+ }
+
+.contact-section .contact-form .input-form:focus {
+  border-color:var(--c-icon);
+  outline: none;
+}
+.contact-section .contact-form .btn-learn-more {
+  display: inline-block;
+  padding:10px 30px;
+  border-radius: 4px;
+  border: solid 2px var(--c-icon);
+  text-align: center;
+  cursor: pointer;
+  line-height: 1.5;
+  color:var(--c-footer);
+  font-size: 1.6rem;
+  transition: all 0.3s;
+}
+
+.contact-section .contact-form .btn-learn-more:hover {
+  border: solid 2px var(--c-color-label);
+  background-color:var(--c-icon);
+  color:var(--white);
+}
+.contact-section .info {
+  margin-left:auto;
+}
+.contact-section .info span {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: 0.3rem;
+  font-family:var(--f-mukta);
+  text-transform: uppercase;
+  color: #65c0ba;
+  font-weight: 600;
+}
+.experience .experience-list ul li img {
+  width: 70px;
+  height: auto;
+  }
+.experience .experience-list p {
+    font-family:var(--f-mukta-extra-light) ;
+}
   
-  .header .logo h3 a {
-    color:var(--white);
-    font-weight:var(--f-weight-bold);
-  }
-  .header .menu {
-    width: 40px;
-    height: 23px;
-    cursor: pointer;
-  }
-  
-  .header .menu span {
-    /* position: absolute; */
-    width: 100%;
-    height: 2px;
-    background:var(--white);
-    display:block;
-  }
-  
-  /* .header .menu span:nth-child(1) {
-    top: 0;
-  }
-  
-  .header .menu span:nth-child(2) {
-    top: 10px;
-  }
-  
-  .header .menu span:nth-child(3) {
-    top: 20px;
-  } */
-  .hero .content {
-    color:var(--white);
-    /* margin-top: 20rem; */
-  }
-  .hero .content .content-wrapper {
-    height:100vh;
-    min-height: 700px;
-  }
-  .hero .content h1 {
-    font-size: 8rem;
-    font-weight: var(--f-weight-bold);
-    line-height: 1;
-    margin-bottom: 2.4rem;
-  }
-  .hero .content p {
-    font-size: 3rem;
-    line-height: 1.5;
-    font-weight:var(--f-weight-light);
-    font-family: "Mukta Mahee ExtraLight";
-    margin-bottom:5.8rem;
-    color:var(--white);
-  }
-  .hero .content p a {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.5);
-    transition: all 0.3s;
-    padding-bottom: 2px;
-  }
-  .hero .content p a:hover {
-    border-bottom: 2px solid var(--white);
-    color: rgba(255, 255, 255, 1);
-  }
-  .button {
-    background: transparent;
-    border: 2px solid var(--white);
-    border-radius: 4px;
-    display: inline-block;
-    padding: 20px 30px;
-    color:var(--light);
-    font-size: 1.5rem;
-    transition: all 0.15s;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-  }
-  .button:hover {
-    background:var(--white);
-    color:var(--black);
-  }
-  .hero .scroll-down {
-    position: absolute;
-    bottom: 20px;
-    color:var(--white);
-    z-index: 2;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-  }
-  .hero .scroll-down * {
-    display: block;
-  }
-  
-  .hero .scroll-down i {
-    font-size: 1.4rem;
-  }
-  .hero .scroll-down span {
-    text-transform: uppercase;
-    font-size: 1.2rem;
-  }
-  
-  .welcome  img {
-    width: 100%;
-    height: auto;
-  }
-  .welcome .title {
-    font-size: 3.2rem;
-  }
-  .welcome  p {
-    font-family:var(--f-mukta-extra-light);
-    }
-  .welcome .video-playable {
-    gap:10px;
-  }
-  .welcome .video-playable .icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid var(--c-text-main);
-    color:var(--c-icon);
-    transition: all .3s;
-    padding-left: 3px;
-    font-size: 1.7rem;
-  }
-  .welcome .video-playable .text {
-    font-size: 1.8rem;
-    color: var(--c-icon);
-    font-family: "Mukta Mahee Medium";
-    letter-spacing: 2px;
-    font-weight: var(--f-weight-bold);
-    transition: all .3s;
-  }
-  .welcome .video-playable:hover .icon {
-    border-color: var(--black);
-    color:var(--black);
-  }
-  .welcome .video-playable:hover .text {
-    color:var(--c-color-label);
-  }
-  .experience {
-    background: var(--c-color-background);
-    border-top: 1px solid var(--c-color-border);
-  }
-    .experience .experience-list ul li img {
-    width: 70px;
-    height: auto;
-  }
-  .experience .experience-list p {
-    font-family:"Mukta Mahee ExtraLight" ;
-  }
-  
-  .international .slider img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.international .slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   }
   .international .slider:before {
     position:absolute;

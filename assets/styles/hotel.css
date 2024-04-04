@@ -1,0 +1,321 @@
+
+  .hero {
+    height:70vh;
+    background-image: url(/assets/images/hero_5.jpg.webp);
+    width:100%;
+    background-size: cover;
+    min-height: 500px;
+    background-position: center center;
+  }
+  .hero:before {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    content:"";
+    background: rgba(0, 0, 0, 0.2); ;
+  }
+  .header {
+    padding: 60px 0;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+  }
+  .header .logo h3 {
+    font-size: 3rem;
+  }
+  
+  .header .logo h3 a {
+    color:var(--white);
+    font-weight:var(--f-weight-bold);
+  }
+  .header .menu {
+    width: 40px;
+    height: 23px;
+    cursor: pointer;
+  }
+  
+  .header .menu span {
+    /* position: absolute; */
+    width: 100%;
+    height: 2px;
+    background:var(--white);
+    display:block;
+  }
+  .hero .content {
+    color:var(--white);
+    /* margin-top: 20rem; */
+  }
+  .hero .content .content-wrapper {
+    height:70vh;
+    min-height: 500px;
+  }
+  .hero .content h1 {
+    font-size: 8rem;
+    font-weight: var(--f-weight-bold);
+    line-height: 1;
+     }
+  .hero .content p {
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight:var(--f-weight-light);
+    font-family: "Mukta Mahee ExtraLight";
+    margin-bottom:4.8rem;
+    color:var(--white);
+  }
+  .hero .content p a {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s;
+    padding-bottom: 2px;
+  }
+  .hero .content p a:hover {
+    border-bottom: 2px solid var(--white);
+    color: rgba(255, 255, 255, 1);
+  }
+  .experience .experience-list ul li img {
+    width: 70px;
+    height: auto;
+  }
+  .experience .experience-list p {
+    font-family:"Mukta Mahee ExtraLight" ;
+  }
+  .familyroom .image {
+    background-image: url(/assets/images/hero_1.jpg.webp);
+    min-height: 70vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+   }
+  .familyroom .content {
+     padding:100px 7%;
+  }
+  .familyroom .title {
+    font-size: 4.1rem;
+  }
+  familyroom .content {
+   padding:78px;
+  }
+  .familyroom  p {
+    font-family:var(--f-mukta-extra-light);
+    }
+  .button {
+    background: transparent;
+    border: 2px solid var(--c-color-label);
+    border-radius: 4px;
+    display: inline-block;
+    padding: 10px 30px;
+    color:var(--c-learnmore);
+    font-size: 1.5rem;
+    transition: all 0.15s;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: "Mukta Mahee Regular";
+    }
+  .button:hover {
+      background:var(--c-icon);
+      color:var(--black);
+    }
+  .PresidentialRoom .image {
+    background-image: url(/assets/images/welcome.webp);
+    min-height: 70vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    }
+  .PresidentialRoom .content {
+    padding:100px 7%;
+    }
+  .PresidentialRoom .title {
+      font-size: 4.1rem;
+    }
+   .hotel-gallery .subtitle {
+      color:var(--c-text);
+      }
+  .hotel-gallery .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hotel-gallery .slider:before {
+    position:absolute;
+    width: 100%;
+    height:100%;
+    content:"";
+    top:0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .hotel-gallery .slider .bullets {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+  }
+  .hotel-gallery .slider .bullets ul {
+       gap: 10px;
+     }
+  .hotel-gallery .slider .bullets ul li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    background:var(--white);
+    cursor:pointer;
+  }
+  .hotel-gallery .slider .bullets ul li.active {
+    background: transparent;
+  }
+  .hotel-gallery .slider .arrows i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4.5rem;
+    color:var(--c-arrows);
+    transition: all .3s;
+    cursor:pointer;
+  }
+  .hotel-gallery .slider .arrows i:hover {
+    color:var(--text);
+  }
+  .hotel-gallery .slider .arrows i.fa-angle-left {
+    left: -52px;
+  }
+
+  .hotel-gallery .slider .arrows i.fa-angle-right {
+    right: -52px;
+  }
+  .hotel-feature {
+    background: #e9ecef;
+    padding-top:100px;
+  }
+  .hotel-feature .subtitle {
+    color:var(--c-text);
+    font-family:var(--f-mukta-light);
+  }
+  .hotel-feature:after {
+    content: "";
+    width: 100%;
+    height: 430px;
+    position: absolute;
+    top: -430px;
+    left: 0;
+    background: #e9ecef;
+    /* transform: skew(0, -4deg); */
+    z-index: -1;
+  }
+  .hotel-feature .hotel-feature-list ul li .image img {
+    width: 100%;
+    height: auto;
+  }
+  .hotel-feature .hotel-feature-list .hotel-feature-list-holder {
+    background: var(--white);
+    height:100%;
+  }
+  .hotel-feature .hotel-feature-list .content {
+    padding: 10px 30px;
+  }
+   .hotel-feature .hotel-feature-list .content .title h3 {
+    line-height: 1.2;
+    color: #000;
+    margin: 0;
+    transition: all 0.5s;
+    font-size:2.6rem;
+  }
+  .hotel-feature .hotel-feature-list .content .title:hover h3 {
+    color:var(--c-icon);
+  }
+  .footer {
+    background:var(--c-footer);
+    font-size: 1.8rem;
+  }
+  .footer .title {
+    color:var(--white);
+    font-size: 1.8rem;
+      }
+  .footer ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+    padding: 5px 0;
+  }
+  .footer ul li a:hover {
+    color:var(--white);
+  }
+  .footer .lable-section .lable {
+    color: var(--white);
+    font-style: italic;
+     }
+  .footer p {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .footer .newsletter form input {
+      background: transparent;
+      border:none;
+      outline: 0;
+      color:var(--white);
+      padding: 10px 40px 14px 0px;
+      text-indent: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 1.5rem;
+      width: 100%;
+      transition:all .3s;
+    }
+  
+  .footer .newsletter form input::placeholder {
+    color:rgba(255,255,255,.2);
+    font-style: italic;
+    font-size: 1.5rem;
+  }
+  .footer .newsletter form input:focus {
+     border-bottom: 1px solid rgba(255, 255, 255, 1);
+  }
+  
+  .footer .newsletter form button {
+    background: none;
+    outline: 0;
+    border:none;
+    box-shadow: none;
+    cursor:pointer;
+    position: absolute;
+    right:20px;
+    bottom:15px;
+    color:var(--white);
+  }
+  .footer .footer-bottom {
+    text-align: center;
+    padding-top:60px;
+    margin-top:70px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+   }
+   .footer .footer-bottom a {
+      color:rgba(255, 255, 255, 0.7);
+   }
+   .footer .footer-bottom a:hover {
+    color:rgba(255, 255, 255, 1);
+   }
+   .footer .footer-bottom ul {
+    gap:15px;
+   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
