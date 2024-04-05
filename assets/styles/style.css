@@ -69,6 +69,8 @@
   height: 2px;
   background:var(--white);
   display:block;
+  transition:all 1s;
+  opacity:1;
 }
 /*Because I wanted it to be a higher priority*/
 .header .menu.active span {
@@ -91,7 +93,7 @@
 .header .menu.active span:nth-child(2) {
   background: #000;
   opacity: 0;
-  left: 0;
+  left: -60px;
 }
 .header .menu.active span:nth-child(3) {
   background: #000;
